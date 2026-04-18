@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Initlance — Crie sua conta como Freelancer e comece sua jornada." />
+    <title>Cadastro Freelancer · Initlance</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- CSS externo -->
+    <link rel="stylesheet" th:href="@{/CSS/cadastro-freelancer.css}" />
+</head>
+
+<body>
+
+    <!-- Blobs decorativos -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+
+    <header class="login-header">
+        <div class="container">
+            <a th:href="@{/initlance}" href="/" class="header-logo" aria-label="Voltar para a página inicial">
+                <img th:src="@{/IMG/logoInitlanceSemfundo.png}" alt="Initlance – Freelancer Jovens"
+                    style="height: 50px; width: auto; transform: scale(2.3); transform-origin: left center;" />
+            </a>
+
+            <div class="step-indicator" aria-label="Etapa 1 de 1">
+                <span class="step-dot step-dot--active" aria-hidden="true"></span>
+                <span class="step-line" aria-hidden="true"></span>
+                <span class="step-dot" aria-hidden="true"></span>
+                <span class="step-line" aria-hidden="true"></span>
+                <span class="step-dot" aria-hidden="true"></span>
+                <span class="step-label">Cadastro</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="login-main" id="main-content">
+        <div class="container">
+            <div class="login-grid">
+
+                <!-- fomulario -->
+                <section class="login-form-section" aria-labelledby="cadastro-heading">
+
+                    <div class="form-card">
+
+                        <!-- Faixa top -->
+                        <div class="form-card-header">
+                            <div class="form-title-row">
+                                <div class="form-title-icon" aria-hidden="true">
+                                    <i class="bi bi-person-workspace"></i>
+                                </div>
+                                <div>
+                                    <h2 class="form-title" id="cadastro-heading">Criar conta Freelancer</h2>
+                                    <p class="form-subtitle">
+                                        Já tem uma conta?
+                                        <a th:href="@{/login/sing-up}" href="/login/sing-up" class="link-purple">Entre aqui</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="social-login" aria-label="Cadastrar com redes sociais">
+                            <button type="button" class="btn-social" aria-label="Continuar com Google">
+                                <i class="bi bi-google" aria-hidden="true"></i>
+                                Google
+                            </button>
+                            <button type="button" class="btn-social" aria-label="Continuar com GitHub">
+                                <i class="bi bi-github" aria-hidden="true"></i>
+                                GitHub
+                            </button>
+                        </div>
+
+                        <div class="divider-or" role="separator" aria-label="ou">
+                            <span>ou preencha seus dados</span>
+                        </div>
+
+                        <!-- Formulário -->
+                        <form th:action="@{/freelancers/cadastro}" method="post" novalidate
+                            aria-label="Formulário de cadastro freelancer">
+
+                            <!-- Nome Completo -->
+                            <div class="field-group">
+                                <label for="nome" class="field-label">Nome Completo</label>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-person"></i></span>
+                                    <input type="text" class="field-input" id="nome" name="nome"
+                                        placeholder="Seu nome completo" autocomplete="name" required />
+                                </div>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div class="field-group">
+                                <label for="email" class="field-label">E-mail</label>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="field-input" id="email" name="email"
+                                        placeholder="seu@email.com" autocomplete="email" required />
+                                </div>
+                            </div>
+
+                            <!-- Senha -->
+                            <div class="field-group">
+                                <label for="senha" class="field-label">Senha</label>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="field-input" id="senha" name="senha"
+                                        placeholder="Mínimo 8 caracteres" autocomplete="new-password" required />
+                                    <button type="button" class="btn-toggle-pass" aria-label="Mostrar ou ocultar senha"
+                                        id="togglePass">
+                                        <i class="bi bi-eye" aria-hidden="true" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                                <!-- Barra de força de senha -->
+                                <div class="password-strength" aria-label="Força da senha">
+                                    <div class="strength-bars">
+                                        <span class="bar" id="bar1"></span>
+                                        <span class="bar" id="bar2"></span>
+                                        <span class="bar" id="bar3"></span>
+                                        <span class="bar" id="bar4"></span>
+                                    </div>
+                                    <span class="strength-label" id="strengthLabel">Digite sua senha</span>
+                                </div>
+                            </div>
+
+                            <!-- Área de atuação -->
+                            <div class="field-group">
+                                <label for="area" class="field-label">Área de Atuação</label>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-briefcase"></i></span>
+                                    <select class="field-input field-select" id="area" name="area">
+                                        <option value="" disabled selected>Selecione sua área</option>
+                                        <option value="design">Design & UX</option>
+                                        <option value="dev">Desenvolvimento Web</option>
+                                        <option value="mobile">Desenvolvimento Mobile</option>
+                                        <option value="marketing">Marketing Digital</option>
+                                        <option value="conteudo">Redação & Conteúdo</option>
+                                        <option value="video">Vídeo & Motion</option>
+                                        <option value="dados">Dados & BI</option>
+                                        <option value="outro">Outro</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Termos -->
+                            <div class="remember-row">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="termos" id="termos" required />
+                                    <span class="checkbox-custom" aria-hidden="true"></span>
+                                    Concordo com os
+                                    <a href="#" class="link-purple">Termos de Uso</a> e
+                                    <a href="#" class="link-purple">Política de Privacidade</a>
+                                </label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn-submit">
+                                Criar minha conta grátis
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </section>
+
+                <aside class="login-aside" aria-label="Benefícios para freelancers">
+
+                    <h1 class="aside-title">
+                        Comece sua<br /><span class="highlight">jornada hoje</span>
+                    </h1>
+
+                    <p class="aside-subtitle">
+                        Crie sua conta grátis, monte seu portfólio e conecte-se com empresas que precisam do seu talento
+                        agora mesmo.
+                    </p>
+
+                    <ul class="benefits-list" aria-label="Benefícios">
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i class="bi bi-rocket-takeoff-fill"></i></span>
+                            <div>
+                                <strong>Perfil ativo em minutos</strong>
+                                <p>Cadastro rápido e sem burocracia — comece a receber propostas hoje.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i class="bi bi-wallet2"></i></span>
+                            <div>
+                                <strong>Sem taxa de cadastro</strong>
+                                <p>Criar sua conta é 100% grátis. Você só paga quando receber.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i class="bi bi-star-fill"></i></span>
+                            <div>
+                                <strong>Reputação que abre portas</strong>
+                                <p>Sistema de avaliações que valoriza cada entrega e constrói sua credibilidade.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                </aside>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ══════════ FOOTER MÍNIMO ══════════ -->
+    <footer class="login-footer">
+        <div class="container">
+            <p class="footer-copy">© 2025 Initlance. Todos os direitos reservados.</p>
+            <nav aria-label="Links legais">
+                <a href="#" class="footer-link">Termos de Uso</a>
+                <a href="#" class="footer-link">Privacidade</a>
+                <a href="#" class="footer-link">Suporte</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        /* Toggle senha */
+        const togglePass = document.getElementById('togglePass');
+        const senhaInput = document.getElementById('senha');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePass.addEventListener('click', () => {
+            const isPass = senhaInput.type === 'password';
+            senhaInput.type = isPass ? 'text' : 'password';
+            eyeIcon.className = isPass ? 'bi bi-eye-slash' : 'bi bi-eye';
+        });
+
+        /* Força da senha */
+        const bars = [
+            document.getElementById('bar1'),
+            document.getElementById('bar2'),
+            document.getElementById('bar3'),
+            document.getElementById('bar4'),
+        ];
+        const strengthLabel = document.getElementById('strengthLabel');
+
+        senhaInput.addEventListener('input', () => {
+            const val = senhaInput.value;
+            let score = 0;
+            if (val.length >= 8) score++;
+            if (/[A-Z]/.test(val)) score++;
+            if (/[0-9]/.test(val)) score++;
+            if (/[^A-Za-z0-9]/.test(val)) score++;
+
+            const labels = ['', 'Fraca', 'Razoável', 'Boa', 'Forte'];
+            const colors = ['', '#ef4444', '#f97316', '#eab308', '#22c55e'];
+
+            bars.forEach((b, i) => {
+                b.style.background = i < score ? colors[score] : 'rgba(255,255,255,.07)';
+            });
+
+            strengthLabel.textContent = val.length === 0 ? 'Digite sua senha' : labels[score];
+            strengthLabel.style.color = val.length === 0 ? 'var(--clr-muted)' : colors[score];
+        });
+    </script>
+
+</body>
+
+</html>

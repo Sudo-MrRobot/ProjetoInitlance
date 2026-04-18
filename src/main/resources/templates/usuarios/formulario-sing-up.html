@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Initlance — Entre na sua conta e acesse projetos, clientes e oportunidades." />
+    <title>Entrar · Initlance</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- CSS externo -->
+    <link rel="stylesheet" th:href="@{/CSS/styles.css}" />
+</head>
+
+<body>
+
+    <!-- Blobs decorativos -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+
+    <!-- ══════════ HEADER MÍNIMO ══════════ -->
+    <header class="login-header">
+        <div class="container">
+            <a th:href="@{/initlance}" href="/" class="header-logo" aria-label="Voltar para a página inicial">
+                <img th:src="@{/IMG/logoInitlanceSemfundo.png}" alt="Initlance – Freelancer Jovens"
+                    style="height: 50px; width: auto; transform: scale(2.3); transform-origin: left center;" />
+            </a>
+        </div>
+    </header>
+
+    <!-- ══════════ MAIN ══════════ -->
+    <main class="login-main" id="main-content">
+        <div class="container">
+            <div class="login-grid">
+
+                <!-- ── Coluna esquerda: apresentação ── -->
+                <aside class="login-aside" aria-label="Benefícios da plataforma">
+
+                    <div class="aside-badge">
+                        <span class="dot" aria-hidden="true"></span>
+                        Plataforma de Freelancers Jovens
+                    </div>
+
+                    <h1 class="aside-title">
+                        Bem-vindo de<br />volta à <span class="highlight">sua jornada</span>
+                    </h1>
+
+                    <p class="aside-subtitle">
+                        Acesse sua conta e continue construindo sua carreira no maior marketplace de jovens talentos do
+                        Brasil.
+                    </p>
+
+                    <!-- Benefícios -->
+                    <ul class="benefits-list" aria-label="Benefícios">
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i
+                                    class="bi bi-lightning-charge-fill"></i></span>
+                            <div>
+                                <strong>Projetos em tempo real</strong>
+                                <p>Receba notificações de novos projetos compatíveis com seu perfil.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i class="bi bi-shield-check-fill"></i></span>
+                            <div>
+                                <strong>Pagamentos protegidos</strong>
+                                <p>Seu dinheiro seguro até a entrega final aprovada pelo cliente.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <span class="benefit-icon" aria-hidden="true"><i class="bi bi-graph-up-arrow"></i></span>
+                            <div>
+                                <strong>Crescimento garantido</strong>
+                                <p>Dashboard com métricas para você evoluir a cada projeto.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <!-- Depoimento rápido -->
+                    <blockquote class="aside-testimonial">
+                        <p>"Entrei sem experiência e em 2 meses já tinha 5 clientes fixos. O Initlance mudou minha
+                            vida!"</p>
+                        <footer>
+                            <div class="avatar av-purple" aria-hidden="true">ML</div>
+                            <div>
+                                <cite class="testi-name">Marina Lima</cite>
+                                <span class="testi-role">Designer · 20 anos · SP</span>
+                            </div>
+                        </footer>
+                    </blockquote>
+
+                </aside>
+
+                <!-- ── Coluna direita: formulário ── -->
+                <section class="login-form-section" aria-labelledby="login-heading">
+
+                    <div class="form-card">
+
+                        <!-- Cabeçalho do card -->
+                        <div class="form-card-header">
+                            <h2 class="form-title" id="login-heading">Entrar na conta</h2>
+                            <p class="form-subtitle">Não tem uma conta? <a th:href="@{/login/entrar-como}"
+                                    href="/login/entrar-como" class="link-purple">Cadastre-se grátis</a></p>
+                        </div>
+
+                        <!-- Divisor social -->
+                        <div class="social-login" aria-label="Entrar com redes sociais">
+                            <button type="button" class="btn-social" aria-label="Continuar com Google">
+                                <i class="bi bi-google" aria-hidden="true"></i>
+                                Google
+                            </button>
+                            <button type="button" class="btn-social" aria-label="Continuar com GitHub">
+                                <i class="bi bi-github" aria-hidden="true"></i>
+                                GitHub
+                            </button>
+                        </div>
+
+                        <div class="divider-or" role="separator" aria-label="ou">
+                            <span>ou entre com e-mail</span>
+                        </div>
+
+                        <!-- Formulário -->
+                        <form action="/login" method="post" novalidate aria-label="Formulário de login">
+
+                            <input type="hidden" name="tipo" value="freelancer" />
+
+                            <!-- Campo E-mail -->
+                            <div class="field-group">
+                                <label for="email" class="field-label">E-mail</label>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-envelope"></i></span>
+                                    <input type="email" class="field-input" id="email" name="email"
+                                        placeholder="seu@email.com" autocomplete="email" required />
+                                </div>
+                            </div>
+
+                            <!-- Campo Senha -->
+                            <div class="field-group">
+                                <div class="label-row">
+                                    <label for="senha" class="field-label">Senha</label>
+                                    <a href="#" class="link-forgot" aria-label="Recuperar senha">Esqueci minha senha</a>
+                                </div>
+                                <div class="input-wrap">
+                                    <span class="input-icon" aria-hidden="true"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="field-input" id="senha" name="senha"
+                                        placeholder="••••••••" autocomplete="current-password" required />
+                                    <button type="button" class="btn-toggle-pass" aria-label="Mostrar ou ocultar senha"
+                                        id="togglePass">
+                                        <i class="bi bi-eye" aria-hidden="true" id="eyeIcon"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Lembrar-me -->
+                            <div class="remember-row">
+                                <label class="checkbox-label">
+                                    <input type="checkbox" name="lembrar" id="lembrar" />
+                                    <span class="checkbox-custom" aria-hidden="true"></span>
+                                    Lembrar de mim por 30 dias
+                                </label>
+                            </div>
+
+                            <!-- Submit -->
+                            <button type="submit" class="btn-submit">
+                                Entrar na conta
+                                <i class="bi bi-arrow-right" aria-hidden="true"></i>
+                            </button>
+
+                        </form>
+
+                        <!-- Rodapé do card -->
+                        <div class="form-card-footer">
+                            <p>É um cliente buscando freelancers? <a th:href="@{/login/entrar-como}"
+                                    href="/login/entrar-como" class="link-purple">Acesse como empresa</a></p>
+                        </div>
+
+                    </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+        </div>
+    </main>
+
+
+    <footer class="login-footer">
+        <div class="container">
+            <p class="footer-copy">© 2025 Initlance. Todos os direitos reservados.</p>
+            <nav aria-label="Links legais">
+                <a href="#" class="footer-link">Termos de Uso</a>
+                <a href="#" class="footer-link">Privacidade</a>
+                <a href="#" class="footer-link">Suporte</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Toggle show/hide senha -->
+    <script>
+        const togglePass = document.getElementById('togglePass');
+        const senhaInput = document.getElementById('senha');
+        const eyeIcon = document.getElementById('eyeIcon');
+
+        togglePass.addEventListener('click', () => {
+            const isPass = senhaInput.type === 'password';
+            senhaInput.type = isPass ? 'text' : 'password';
+            eyeIcon.className = isPass ? 'bi bi-eye-slash' : 'bi bi-eye';
+        });
+    </script>
+
+</body>
+
+</html>

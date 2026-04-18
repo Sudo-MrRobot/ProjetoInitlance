@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Initlance — Escolha como deseja acessar a plataforma." />
+    <title>Entrar Como · Initlance</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+        rel="stylesheet" />
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <!-- CSS externo -->
+    <link rel="stylesheet" th:href="@{/CSS/styles.css}"/>
+</head>
+
+<body>
+
+    <!-- Blobs decorativos -->
+    <div class="blob blob-1" aria-hidden="true"></div>
+    <div class="blob blob-2" aria-hidden="true"></div>
+    <div class="blob blob-3" aria-hidden="true"></div>
+
+    <!-- ══════════ HEADER MÍNIMO ══════════ -->
+    <header class="login-header">
+        <div class="container">
+            <a th:href="@{/initlance}" href="/" class="header-logo" aria-label="Voltar para a página inicial">
+                <img th:src="@{/IMG/logoInitlanceSemfundo.png}" alt="Initlance – Freelancer Jovens"
+                    style="height: 50px; width: auto; transform: scale(2.3); transform-origin: left center;" />
+            </a>
+        </div>
+    </header>
+
+    <main class="entrar-como-main" id="main-content">
+        <div class="container">
+
+            <!-- Topo centralizado -->
+            <div class="ec-header text-center">
+                <h1 class="ec-title">Como você quer <span class="highlight">acessar?</span></h1>
+                <p class="ec-subtitle">
+                    Escolha seu perfil para entrar na plataforma. Cada jornada foi criada especialmente para você.
+                </p>
+            </div>
+
+            <div class="ec-cards-grid" role="list">
+
+                <a th:href="@{/login/entrar(tipo='freelancer')}" href="/login/entrar?tipo=freelancer"
+                    class="ec-card ec-card--freelancer" role="listitem" aria-label="Entrar como Freelancer">
+
+                    <div class="ec-card__glow" aria-hidden="true"></div>
+
+                    <div class="ec-card__icon-wrap" aria-hidden="true">
+                        <i class="bi bi-person-workspace"></i>
+                    </div>
+
+                    <h2 class="ec-card__title">Sou Freelancer</h2>
+                    <p class="ec-card__desc">
+                        Encontre projetos, construa seu portfólio e cresça sua carreira no maior marketplace de
+                        talentos do Brasil.
+                    </p>
+
+                    <ul class="ec-card__features" aria-label="Benefícios para freelancers">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Ofereça seus serviços</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Se destaque com um portifólio profissional </li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Ganhe reconhecimento e credibilidade</li>
+                    </ul>
+
+                    <div class="ec-card__cta" aria-hidden="true">
+                        Entrar como Freelancer
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                </a>
+
+                <!-- Divisor "ou" -->
+                <div class="ec-or-divider" aria-hidden="true">
+                    <span>ou</span>
+                </div>
+
+                <!-- Card Empresa -->
+                <a th:href="@{/login/entrar(tipo='empresa')}" href="/login/entrar?tipo=empresa"
+                    class="ec-card ec-card--empresa" role="listitem" aria-label="Entrar como Empresa">
+
+                    <div class="ec-card__glow ec-card__glow--empresa" aria-hidden="true"></div>
+
+                    <div class="ec-card__icon-wrap ec-card__icon-wrap--empresa" aria-hidden="true">
+                        <i class="bi bi-building-check"></i>
+                    </div>
+
+                    <h2 class="ec-card__title">Sou Empresa</h2>
+                    <p class="ec-card__desc">
+                        Publique projetos, encontre serviços de freelancers verificados e acelere a entrega dos seus resultados
+                        com custos reduzidos.
+                    </p>
+
+                    <ul class="ec-card__features" aria-label="Benefícios para empresas">
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Perfis verificados e avaliados</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Recomendações para contratação rápida e segura</li>
+                        <li><i class="bi bi-check2-circle" aria-hidden="true"></i> Acompanhe o progresso dos projetos</li>
+                    </ul>
+
+                    <div class="ec-card__cta ec-card__cta--empresa" aria-hidden="true">
+                        Entrar como Empresa
+                        <i class="bi bi-arrow-right"></i>
+                    </div>
+
+                </a>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="login-footer">
+        <div class="container">
+            <p class="footer-copy">© 2025 Initlance. Todos os direitos reservados.</p>
+            <nav aria-label="Links legais">
+                <a href="#" class="footer-link">Termos de Uso</a>
+                <a href="#" class="footer-link">Privacidade</a>
+                <a href="#" class="footer-link">Suporte</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
