@@ -97,4 +97,7 @@ Entre em contato com a equipe do **Initlance**:
 ## 👥 Equipe
 
 - João Pedro Sabbadin  
-- Pedro Frismark  
+- Pedro Frismark
+- Matheus Henrique
+- Luis Felipe
+- Luis Guilherme 
