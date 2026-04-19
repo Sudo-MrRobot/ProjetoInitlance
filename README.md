@@ -85,14 +85,16 @@ O projeto será testado inicialmente dentro da ETEC, com foco em:
 
 ---
 
+## 📞 Contato do Projeto
+
+- 📧 Email: contato@initlance.com *(ajustar depois)*  
+- 📸 Instagram: https://instagram.com/initlance *(ajustar depois)*  
+
+---
+
 ## 👥 Equipe
 
-- 👨‍💻 **João Pedro Sabbadin**  
-  🔗 GitHub: https://github.com/jpsabbadin  
-  🔗 LinkedIn: https://linkedin.com/in/jpsabbadin  
-
-- 👨‍💻 **Pedro Frismark**  
-  🔗 GitHub: https://github.com/Sudo-MrRobot  
-  🔗 GitHub (secundário): https://github.com/Sudo-Robô1  
+- João Pedro Sabbadin  
+- Pedro Frismark  
 
 ---
