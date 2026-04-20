@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Initlance — Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" th:href="@{/CSS/base/variables.css}" href="/CSS/base/variables.css" />
+  <link rel="stylesheet" th:href="@{/CSS/base/reset.css}" href="/CSS/base/reset.css" />
+  <link rel="stylesheet" th:href="@{/CSS/base/typography.css}" href="/CSS/base/typography.css" />
+  <link rel="stylesheet" th:href="@{/CSS/base/animations.css}" href="/CSS/base/animations.css" />
+  <link rel="stylesheet" th:href="@{/CSS/pages/dashboard.css}" href="/CSS/pages/dashboard.css" />
+</head>
+<body class="dashboard-page">
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <span class="logo-mark">IL</span>
+    <span class="logo-text">Initlance</span>
+  </div>
+
+  <div class="sidebar-user">
+    <div class="user-avatar">LF</div>
+    <div class="user-info">
+      <div class="user-name">Luis Felipe</div>
+      <div class="user-role">Full-Stack Dev</div>
+    </div>
+    <div class="user-status online" title="Online"></div>
+  </div>
+
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Principal</div>
+    <a href="#" class="nav-item active" data-section="overview">
+      <i class="bi bi-grid-1x2-fill"></i><span>Visão Geral</span>
+    </a>
+    <a href="#" class="nav-item" data-section="projects">
+      <i class="bi bi-kanban-fill"></i><span>Projetos</span>
+      <span class="badge-count">3</span>
+    </a>
+    <a href="#" class="nav-item" data-section="proposals">
+      <i class="bi bi-send-fill"></i><span>Propostas</span>
+      <span class="badge-count">5</span>
+    </a>
+    <a href="#" class="nav-item" data-section="jobs">
+      <i class="bi bi-briefcase-fill"></i><span>Buscar Trabalhos</span>
+    </a>
+
+    <div class="nav-section-label">Comunicação</div>
+    <a href="#" class="nav-item" data-section="messages">
+      <i class="bi bi-chat-dots-fill"></i><span>Mensagens</span>
+      <span class="badge-count red">2</span>
+    </a>
+    <a href="#" class="nav-item" data-section="notifications">
+      <i class="bi bi-bell-fill"></i><span>Notificações</span>
+      <span class="badge-count red">4</span>
+    </a>
+
+    <div class="nav-section-label">Conta</div>
+    <a href="#" class="nav-item" data-section="financial">
+      <i class="bi bi-wallet2"></i><span>Financeiro</span>
+    </a>
+    <a href="#" class="nav-item" data-section="reviews">
+      <i class="bi bi-star-fill"></i><span>Avaliações</span>
+    </a>
+  </nav>
+
+  <div class="sidebar-footer">
+    <a href="#" class="nav-item">
+      <i class="bi bi-gear-fill"></i><span>Configurações</span>
+    </a>
+    <a href="#" class="nav-item logout">
+      <i class="bi bi-box-arrow-left"></i><span>Sair</span>
+    </a>
+  </div>
+</aside>
+
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<div class="main-wrapper">
+
+  <header class="topbar">
+    <button class="sidebar-toggle" id="sidebarToggle" aria-label="Abrir menu">
+      <i class="bi bi-list"></i>
+    </button>
+    <div class="topbar-title" id="topbarTitle">Visão Geral</div>
+    <div class="topbar-right">
+      <button class="topbar-icon-btn" id="notifBtn" aria-label="Notificações">
+        <i class="bi bi-bell"></i>
+        <span class="notif-dot"></span>
+      </button>
+      <div class="topbar-avatar">LF</div>
+    </div>
+  </header>
+
+  <main class="content" id="mainContent">
+
+    <section class="section" id="sec-overview">
+      <div class="section-header">
+        <h1 class="section-title">Olá, Luis</h1>
+        <p class="section-sub">Segunda-feira, 20 de Abril de 2026</p>
+      </div>
+
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-icon purple"><i class="bi bi-currency-dollar"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Ganhos Totais</div>
+            <div class="kpi-value">R$ 38.420</div>
+            <div class="kpi-change up"><i class="bi bi-arrow-up-short"></i> +12% vs mês anterior</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon green"><i class="bi bi-graph-up-arrow"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Ganhos do Mês</div>
+            <div class="kpi-value">R$ 4.750</div>
+            <div class="kpi-change up"><i class="bi bi-arrow-up-short"></i> +8% vs abril/2025</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon blue"><i class="bi bi-kanban"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Projetos Ativos</div>
+            <div class="kpi-value">3</div>
+            <div class="kpi-change neutral"><i class="bi bi-dash"></i> Estável</div>
+          </div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-icon yellow"><i class="bi bi-star-fill"></i></div>
+          <div class="kpi-body">
+            <div class="kpi-label">Avaliação Média</div>
+            <div class="kpi-value">4.9</div>
+            <div class="kpi-change up"><i class="bi bi-arrow-up-short"></i> Top 5% da plataforma</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-lg-7">
+          <div class="card-dash">
+            <div class="card-dash-header">
+              <span>Receita Mensal</span>
+              <div class="chart-legend">
+                <span class="dot-legend purple"></span> 2026
+                <span class="dot-legend" style="background:#444"></span> 2025
+              </div>
+            </div>
+            <canvas id="revenueChart" height="200"></canvas>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card-dash">
+            <div class="card-dash-header"><span>Atividade Recente</span></div>
+            <ul class="activity-list">
+              <li class="activity-item">
+                <div class="act-icon purple"><i class="bi bi-check-lg"></i></div>
+                <div class="act-body">
+                  <div class="act-title">Projeto entregue — E-commerce Modas</div>
+                  <div class="act-time">Hoje, 09:14</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script th:src="@{/script/dashboardFreelancer.js}" src="/script/dashboardFreelancer.js"></script>
+</body>
+</html>

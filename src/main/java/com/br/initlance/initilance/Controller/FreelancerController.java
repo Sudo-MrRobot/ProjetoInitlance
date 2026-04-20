@@ -11,4 +11,9 @@ public class FreelancerController {
     public String cadastrarFreelancer(){
         return "freelancers/formularioCadastroFreelancer";
     }
+
+    @GetMapping("/dashboard")
+    public String dashboard(){
+        return "freelancers/dashboard";
+    }
 }

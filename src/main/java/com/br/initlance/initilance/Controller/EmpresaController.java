@@ -12,4 +12,9 @@ public class EmpresaController {
     public String cadastrarEmpresa(){
         return "empresas/formularioCadastroEmpresa";
     }
+
+    @GetMapping("/dashboard")
+    public String dashboard(){
+        return "empresas/dashboard";
+    }
 }
