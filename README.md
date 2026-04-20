@@ -1,6 +1,5 @@
 # 🚀 Initlance
-
-## Do aprendizado à experiência profissional
+### Do aprendizado à experiência profissional
 
 ---
 
@@ -8,91 +7,97 @@
 
 O **Initlance** é uma plataforma digital que conecta jovens talentos — especialmente estudantes técnicos — a oportunidades reais de trabalho freelancer.
 
-Seu objetivo é facilitar o primeiro contato com o mercado, permitindo o desenvolvimento de experiência prática, criação de portfólio e geração de oportunidades, enquanto clientes encontram soluções rápidas e acessíveis para suas demandas.
+A proposta é simples: **transformar aprendizado em experiência prática**, permitindo que iniciantes construam portfólio enquanto ajudam clientes com soluções acessíveis e rápidas.
 
 ---
 
 ## ❗ Problema
 
-Muitos estudantes enfrentam dificuldades para:
+### 👨‍🎓 Para estudantes
+- Dificuldade em conseguir o primeiro trabalho  
+- Falta de experiência prática  
+- Ausência de portfólio profissional  
 
-- Conseguir o primeiro trabalho  
-- Ganhar experiência prática  
-- Construir um portfólio profissional  
-
-Ao mesmo tempo, empresas e clientes:
-
-- Precisam de serviços rápidos e pontuais  
-- Buscam alternativas mais acessíveis  
-- Têm dificuldade em encontrar talentos iniciantes  
+### 🏢 Para empresas e clientes
+- Necessidade de serviços rápidos e pontuais  
+- Orçamentos limitados  
+- Dificuldade em encontrar talentos iniciantes confiáveis  
 
 ---
 
 ## 💡 Solução
 
-O **Initlance** propõe uma plataforma que:
+O **Initlance** resolve isso criando um ambiente onde:
 
-- Conecta freelancers iniciantes a clientes  
-- Permite a publicação e busca de serviços  
-- Facilita a comunicação entre as partes  
-- Incentiva a construção de reputação e portfólio  
+- 🔗 Freelancers iniciantes se conectam com clientes  
+- 🔍 Serviços podem ser publicados e encontrados facilmente  
+- 💬 A comunicação é simples e direta  
+- ⭐ A reputação é construída com avaliações reais  
+- 📁 O portfólio cresce dentro da própria plataforma  
 
 ---
 
 ## 🎯 Público-Alvo
 
 - 👨‍💻 Estudantes técnicos (ETEC e similares)  
-- 🧑‍🎨 Jovens freelancers iniciantes  
+- 🧑‍🎨 Freelancers iniciantes  
 - 🏢 Pequenas empresas e empreendedores  
-- 👤 Pessoas que precisam de serviços pontuais  
+- 👤 Pessoas com demandas pontuais  
 
 ---
 
 ## ⚙️ Funcionalidades
 
-- Cadastro de usuários (Freelancer / Cliente)  
-- Perfil profissional  
-- Publicação e busca de serviços  
-- Sistema de avaliação  
-- Chat básico  
-- Portfólio na plataforma  
+- 👤 Cadastro de usuários (Freelancer / Cliente)  
+- 🧑‍💼 Perfil profissional personalizado  
+- 📢 Publicação de serviços  
+- 🔎 Sistema de busca  
+- ⭐ Avaliações e reputação  
+- 💬 Chat básico  
+- 📁 Portfólio integrado  
 
 ---
 
 ## 🧪 Validação
 
-O projeto será testado inicialmente dentro da ETEC, com foco em:
+O projeto será validado inicialmente dentro da ETEC:
 
-- Validar a ideia com usuários reais  
-- Coletar feedback  
-- Melhorar a experiência antes da expansão  
+- ✔️ Testes com usuários reais  
+- 💬 Coleta de feedback  
+- 🔄 Iteração e melhorias contínuas  
 
 ---
 
 ## 🛠️ Tecnologias
 
-- Frontend: HTML, CSS, JavaScript  
-- Backend: (a definir)  
-- Banco de Dados: (a definir)  
-- Versionamento: Git e GitHub  
+| Camada        | Tecnologia |
+|--------------|-----------|
+| Frontend     | HTML, CSS, JavaScript |
+| Backend      | A definir |
+| Banco de Dados | A definir |
+| Versionamento | Git & GitHub |
 
 ---
 
-## 📢 Status
+## 📢 Status do Projeto
+🚧 Em desenvolvimento 
+📍 Fase inicial de validação
 
-🚧 Em desenvolvimento  
-📍 Fase inicial de validação  
+---
+
+## 📞 Contato
+
+Entre em contato com a equipe do **Initlance**:
+
+📧 **Email:** contato.initlance@gmail.com  
+📸 **Instagram:** [@initlance](https://www.instagram.com/initlance)
 
 ---
 
 ## 👥 Equipe
 
-- 👨‍💻 **João Pedro Sabbadin**  
-  🔗 GitHub: https://github.com/jpsabbadin  
-  🔗 LinkedIn: https://linkedin.com/in/jpsabbadin  
-
-- 👨‍💻 **Pedro Frismark**  
-  🔗 GitHub: https://github.com/Sudo-MrRobot  
-  🔗 GitHub (secundário): https://github.com/Sudo-Robô1  
-
----
+- João Pedro Sabbadin  
+- Pedro Frismark
+- Matheus Henrique
+- Luis Felipe
+- Luis Guilherme 
