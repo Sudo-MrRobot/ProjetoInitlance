@@ -17,9 +17,9 @@ public class LoginController {
     @GetMapping("/entrar")
     public String entrar(@RequestParam("tipo") String tipo) {
         if ("empresa".equals(tipo)) {
-            return "empresas/formularioCadastroEmpresa";
+            return "empresas/formularioLoginEmpresa";
         } else if ("freelancer".equals(tipo)) {
-            return "freelancers/formularioCadastroFreelancer";
+            return "freelancers/formularioLoginFreelancer";
         }
         return "redirect:/login/entrar?erro";
     }
