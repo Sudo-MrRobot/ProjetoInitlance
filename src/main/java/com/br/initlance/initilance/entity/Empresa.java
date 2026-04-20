@@ -10,7 +10,7 @@ import lombok.ToString;
 
 @Entity
 @Data
-@Table(name = "empresas")
+@Table(name = "empresas", schema= "public")
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 

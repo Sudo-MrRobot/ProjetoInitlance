@@ -1,0 +1,99 @@
+.navbar-initlance {
+    background: rgba(8, 6, 15, .7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--clr-border);
+    padding: 1rem 0 .5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0;
+}
+
+.navbar-brand img {
+    height: 48px;
+}
+
+.nav-link-custom {
+    color: var(--clr-muted) !important;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: .95rem;
+    letter-spacing: .01em;
+    transition: color .2s, background .2s;
+    padding: .4rem .9rem !important;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.nav-link-custom:hover {
+    color: var(--clr-purple-300) !important;
+    background: rgba(139, 92, 246, .08);
+}
+
+.navbar-toggler {
+    border-color: rgba(139, 92, 246, .3);
+}
+
+.navbar-toggler-icon {
+    filter: invert(.7) sepia(1) saturate(5) hue-rotate(220deg);
+}
+
+.login-header {
+    position: relative;
+    z-index: 100;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--clr-border);
+    background: rgba(8, 6, 15, .6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.login-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img { height: 42px; display: block; }
+
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.step-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, .25);
+    border: 1px solid rgba(139, 92, 246, .3);
+    transition: all .3s;
+}
+
+.step-dot--active {
+    background: var(--clr-purple-500);
+    border-color: var(--clr-purple-400);
+    box-shadow: 0 0 10px rgba(139, 92, 246, .5);
+}
+
+.step-line {
+    width: 28px;
+    height: 1px;
+    background: rgba(139, 92, 246, .2);
+}
+
+.step-label {
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--clr-purple-400);
+    margin-left: .5rem;
+}
+
+.header-logo img {
+    height: 42px;
+    display: block;
+}

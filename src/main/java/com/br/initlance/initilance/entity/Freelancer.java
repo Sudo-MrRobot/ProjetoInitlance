@@ -9,7 +9,7 @@ import jakarta.persistence.Column;
 
 @Entity
 @Data
-@Table(name = "freelancers")
+@Table(name = "freelancers", schema = "public")
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Freelancer extends Usuario {

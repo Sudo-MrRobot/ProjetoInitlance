@@ -1,0 +1,17 @@
+
+:root {
+    --clr-black:      #08060f;
+    --clr-card:       #100d1c;
+    --clr-border:     rgba(255, 255, 255, .07);
+    --clr-text:       #f0eaf8;
+    --clr-muted:      #8b82a8;
+    --clr-purple-300: #c4b5fd;
+    --clr-purple-400: #a78bfa;
+    --clr-purple-500: #8b5cf6;
+    --clr-purple-700: #5b21b6;
+    --clr-accent:     #d946ef;
+    --font-display:   'Syne', sans-serif;
+    --font-body:      'DM Sans', sans-serif;
+    --radius-sm:      12px;
+    --radius-md:      18px;
+}

@@ -16,7 +16,16 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <link rel="stylesheet" th:href="@{/CSS/styles.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/base/variables.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/base/reset.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/base/typography.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/base/animations.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/components/blobs.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/components/navbar.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/components/buttons.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/components/cards.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/components/footer.css}" />
+    <link rel="stylesheet" th:href="@{/CSS/pages/home.css}" />
 
 
     <link rel="icon" type="image/png" th:href="@{/IMG/favicon-16x16.png}" />
@@ -350,7 +359,7 @@
 
         <hr class="divider-grad" aria-hidden="true" />
 
-        <!-- ══════════ DEPOIMENTOS ══════════ -->
+<!-- depoimentos -->
         <section class="testimonials-section" id="depoimentos" aria-labelledby="testi-heading">
             <div class="container">
 
@@ -370,8 +379,8 @@
                             </p>
                             <footer class="testi-author">
                                 <div class="avatar av-purple" aria-hidden="true">LF</div>
-                                <div>
-                                    <div class="testi-name">Luis Felipe</div>
+                                <div class="testi-author-info">
+                                    <strong class="testi-name">Luis Felipe</strong>
                                     <div class="testi-role">Programador · Fernandópolis, SP</div>
                                 </div>
                             </footer>
@@ -386,8 +395,8 @@
                             </p>
                             <footer class="testi-author">
                                 <div class="avatar av-pink" aria-hidden="true">BR</div>
-                                <div>
-                                    <div class="testi-name">Beatriz Ramos</div>
+                                <div class="testi-author-info">
+                                    <strong class="testi-name">Beatriz Ramos</strong>
                                     <div class="testi-role">CEO Startup · Belo Horizonte, MG</div>
                                 </div>
                             </footer>
@@ -402,8 +411,8 @@
                             </p>
                             <footer class="testi-author">
                                 <div class="avatar av-blue" aria-hidden="true">GC</div>
-                                <div>
-                                    <div class="testi-name">Guilherme Carvalho</div>
+                                <div class="testi-author-info">
+                                    <strong class="testi-name">Guilherme Carvalho</strong>
                                     <div class="testi-role">Dev Front-end · Recife, PE</div>
                                 </div>
                             </footer>

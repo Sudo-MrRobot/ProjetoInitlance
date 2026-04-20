@@ -1,0 +1,222 @@
+.hero {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem 0 5rem;
+    margin-top: 0;
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 4rem 0 3rem;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero-visual {
+        margin-top: 3rem;
+    }
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: rgba(139, 92, 246, .12);
+    border: 1px solid rgba(139, 92, 246, .3);
+    color: var(--clr-purple-300);
+    font-size: .82rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    padding: .35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1.8rem;
+    animation: fadeUp .7s ease both;
+}
+
+.hero-badge .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--clr-accent);
+    animation: pulse 2s infinite;
+}
+
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.6rem, 6vw, 5rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    animation: fadeUp .8s .1s ease both;
+}
+
+.hero-title .highlight {
+    background: linear-gradient(135deg, var(--clr-purple-400), var(--clr-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.15rem;
+    color: var(--clr-muted);
+    max-width: 540px;
+    margin-top: 1.4rem;
+    line-height: 1.75;
+    animation: fadeUp .8s .2s ease both;
+}
+
+.hero-cta-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .9rem;
+    margin-top: 2.5rem;
+    animation: fadeUp .8s .3s ease both;
+}
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    animation: fadeUp .8s .4s ease both;
+}
+
+.stat-number {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--clr-purple-400), var(--clr-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.stat-label {
+    font-size: .85rem;
+    color: var(--clr-muted);
+    margin-top: .1rem;
+}
+
+.hero-visual {
+    animation: fadeUp .9s .2s ease both;
+}
+
+.logos-strip {
+    background: var(--clr-deep);
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    padding: 1.6rem 0;
+    overflow: hidden;
+}
+
+.logos-track {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    animation: scrollX 22s linear infinite;
+    width: max-content;
+}
+
+.logos-track .logo-item {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .9rem;
+    color: rgba(139, 92, 246, .4);
+    white-space: nowrap;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+}
+
+.how-section {
+    padding: 6rem 0;
+}
+
+.categories-section {
+    padding: 6rem 0;
+    background: var(--clr-deep);
+}
+
+.featured-section {
+    padding: 6rem 0;
+}
+
+.testimonials-section {
+    padding: 6rem 0;
+    background: var(--clr-deep);
+}
+
+.cta-section {
+    padding: 6rem 0;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, var(--clr-purple-900) 0%, rgba(217, 70, 239, .35) 100%);
+    border: 1px solid rgba(139, 92, 246, .35);
+    border-radius: 24px;
+    padding: 4rem 3rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-box::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(139, 92, 246, .25) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -.02em;
+}
+
+.cta-sub {
+    color: var(--clr-purple-300);
+    font-size: 1.05rem;
+    margin-top: .8rem;
+}
+
+@media (max-width: 991px) {
+    .hero {
+        padding: 4rem 0 3rem;
+        min-height: auto;
+    }
+
+    .hero-visual {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .cta-box {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+    }
+}
+
+.freelancer-card {
+    background: var(--clr-card);
+    border: 1px solid var(--clr-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all .3s ease;
+}
+
+.freelancer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, .3);
+}
+

@@ -1,0 +1,69 @@
+footer {
+    background: var(--clr-deep);
+    border-top: 1px solid var(--clr-border);
+    padding: 3.5rem 0 2rem;
+    width: 100%;
+}
+
+.login-footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--clr-border);
+    padding: 1.2rem 0;
+    background: rgba(8, 6, 15, .5);
+}
+
+.login-footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: .8rem;
+}
+
+.footer-logo img {
+    height: 38px;
+}
+
+.footer-tagline {
+    font-size: .85rem;
+    color: var(--clr-muted);
+}
+
+.footer-heading {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: .9rem;
+    color: var(--clr-text);
+    margin-bottom: 1rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+}
+
+.footer-heading + nav {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.footer-link {
+    font-size: .8rem;
+    color: var(--clr-muted);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-link:hover {
+    color: var(--clr-purple-300);
+}
+
+.footer-divider {
+    border-color: var(--clr-border);
+    margin: 2rem 0 1.5rem;
+}
+
+.footer-copy {
+    font-size: .8rem;
+    color: var(--clr-muted);
+    margin: 0;
+}

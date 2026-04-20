@@ -12,12 +12,13 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "usuarios")
+@Table(name = "usuarios", schema = "public")
 @Inheritance( strategy = InheritanceType.JOINED)
 public class Usuario {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
     private Integer idUsuario;
 
     @Column(nullable = false, length = 100)

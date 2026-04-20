@@ -1,0 +1,200 @@
+.btn-nav-entrar {
+    background: transparent;
+    border: 1px solid var(--clr-purple-500);
+    color: var(--clr-purple-400);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: .9rem;
+    padding: .45rem 1.3rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.btn-nav-entrar:hover {
+    background: rgba(139, 92, 246, .15);
+    color: var(--clr-purple-300);
+}
+
+.btn-nav-cadastro {
+    background: #560D73;
+    border: none;
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: .9rem;
+    padding: .45rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.btn-nav-cadastro:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary-grad {
+    background: #560D73;
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: .85rem 2.2rem;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, .2);
+    transition: all .25s;
+}
+
+.btn-primary-grad:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(139, 92, 246, .55);
+    color: #fff;
+}
+
+.btn-outline-grad {
+    background: transparent;
+    color: var(--clr-purple-300);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 1rem;
+    padding: .85rem 2.2rem;
+    border-radius: 50px;
+    border: 1px solid rgba(139, 92, 246, .4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    transition: all .25s;
+}
+
+.btn-outline-grad:hover {
+    background: rgba(139, 92, 246, .1);
+    border-color: var(--clr-purple-400);
+    color: var(--clr-purple-300);
+}
+
+.btn-sm-custom {
+    font-size: .88rem;
+    padding: .6rem 1.4rem;
+}
+
+.btn-outline-light-custom {
+    border-color: rgba(255, 255, 255, .2);
+    color: #fff;
+}
+
+.btn-outline-light-custom:hover {
+    background: rgba(255, 255, 255, .08);
+    color: #fff;
+}
+
+.btn-hire {
+    background: linear-gradient(135deg, var(--clr-purple-700), var(--clr-accent));
+    color: #fff;
+    border: none;
+    font-size: .8rem;
+    font-weight: 600;
+    padding: .4rem 1rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.btn-hire:hover {
+    transform: scale(1.04);
+    color: #fff;
+}
+
+.social-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: rgba(139, 92, 246, .1);
+    border: 1px solid var(--clr-border);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-purple-400);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all .2s;
+}
+
+.social-btn:hover {
+    background: rgba(139, 92, 246, .25);
+    color: var(--clr-purple-300);
+}
+
+.btn-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    background: rgba(255, 255, 255, .04);
+    border: 1px solid var(--clr-border);
+    color: var(--clr-text);
+    font-family: var(--font-body);
+    font-size: .88rem;
+    font-weight: 500;
+    padding: .6rem 1rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.btn-social:hover {
+    background: rgba(139, 92, 246, .1);
+    border-color: rgba(139, 92, 246, .4);
+    color: var(--clr-purple-300);
+}
+
+.btn-toggle-pass {
+    position: absolute;
+    right: .8rem;
+    background: none;
+    border: none;
+    color: var(--clr-muted);
+    cursor: pointer;
+    font-size: 1rem;
+    padding: .2rem;
+    display: flex;
+    align-items: center;
+    transition: color .2s;
+}
+
+.btn-toggle-pass:hover {
+    color: var(--clr-purple-400);
+}
+
+.btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--clr-purple-700) 0%, var(--clr-accent) 100%);
+    color: #fff;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: .85rem 1.5rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    box-shadow: 0 8px 28px rgba(139, 92, 246, .4);
+    transition: all .25s;
+    letter-spacing: .01em;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 36px rgba(139, 92, 246, .55);
+}
+
+.btn-submit:active {
+    transform: translateY(0);
+}
