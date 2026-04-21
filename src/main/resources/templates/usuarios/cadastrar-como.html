@@ -38,7 +38,7 @@
     <header class="login-header">
         <div class="container">
             <a th:href="@{/initlance}" href="/" class="header-logo" aria-label="Voltar para a página inicial">
-                <img th:src="@{/IMG/logoInitlanceSemfundo.png}" alt="Initlance – Freelancer Jovens"
+                <img th:src="@{/IMG/logoInitlanceSemfundo.png}" alt="Initlance – Serviços Freelancers"
                     style="height: 50px; width: auto; transform: scale(2.3); transform-origin: left center;" />
             </a>
         </div>
@@ -57,8 +57,8 @@
 
             <div class="ec-cards-grid" role="list">
 
-                <a th:href="@{/login/entrar(tipo='freelancer')}" href="/login/entrar?tipo=freelancer"
-                    class="ec-card ec-card--freelancer" role="listitem" aria-label="Entrar como Freelancer">
+                <a th:href="@{/login/cadastrar(tipo='freelancer')}" href="/login/cadastrar?tipo=freelancer"
+                    class="ec-card ec-card--freelancer" role="listitem" aria-label="Cadastrar como Freelancer">
 
                     <div class="ec-card__glow" aria-hidden="true"></div>
 
@@ -91,8 +91,8 @@
                 </div>
 
                 <!-- Card Empresa -->
-                <a th:href="@{/login/entrar(tipo='empresa')}" href="/login/entrar?tipo=empresa"
-                    class="ec-card ec-card--empresa" role="listitem" aria-label="Entrar como Empresa">
+                <a th:href="@{/login/cadastrar(tipo='empresa')}" href="/login/cadastrar?tipo=empresa"
+                    class="ec-card ec-card--empresa" role="listitem" aria-label="Cadastrar como Empresa">
 
                     <div class="ec-card__glow ec-card__glow--empresa" aria-hidden="true"></div>
 
