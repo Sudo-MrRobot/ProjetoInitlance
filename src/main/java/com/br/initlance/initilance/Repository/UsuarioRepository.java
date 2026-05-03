@@ -9,6 +9,12 @@ import com.br.initlance.initilance.entity.Usuario;
 
 @Repository
 public interface UsuarioRepository extends JpaRepository<Usuario, Integer> {
-    
+
     Optional<Usuario> findByEmail(String email);
+
+    Optional<Usuario> findByEmailIgnoreCase(String email);
+
+    Optional<Usuario> findByGithubId(Long githubId);
+
+    Optional<Usuario> findByGoogleId(String googleId);
 }

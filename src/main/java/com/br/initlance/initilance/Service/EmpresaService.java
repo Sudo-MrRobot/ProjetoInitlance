@@ -1,5 +1,7 @@
 package com.br.initlance.initilance.Service;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,5 +16,9 @@ public class EmpresaService {
 
     public Empresa salvar(Empresa empresa) {
         return empresaRepository.save(empresa);
+    }
+
+    public Optional<Empresa> buscarPorEmail(String email) {
+        return empresaRepository.findByEmail(email);
     }
 }

@@ -16,6 +16,6 @@ import lombok.ToString;
 
 public class Empresa extends Usuario {
     
-    @Column(nullable = false, length = 20, unique=true)
+    @Column(length = 20, unique=true)
     private String cnpj;
 }

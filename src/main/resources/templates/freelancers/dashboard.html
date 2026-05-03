@@ -22,9 +22,9 @@
   </div>
 
   <div class="sidebar-user">
-    <div class="user-avatar">LF</div>
+    <div class="user-avatar" th:text="${iniciais}"></div>
     <div class="user-info">
-      <div class="user-name">Luis Felipe</div>
+      <div class="user-name"><span th:text="${nome}">Nome</span></div>
       <div class="user-role">Full-Stack Dev</div>
     </div>
     <div class="user-status online" title="Online"></div>
@@ -70,7 +70,7 @@
     <a href="#" class="nav-item">
       <i class="bi bi-gear-fill"></i><span>Configurações</span>
     </a>
-    <a href="#" class="nav-item logout">
+    <a th:href="@{/initlance}" class="nav-item logout">
       <i class="bi bi-box-arrow-left"></i><span>Sair</span>
     </a>
   </div>
@@ -98,8 +98,8 @@
 
     <section class="section" id="sec-overview">
       <div class="section-header">
-        <h1 class="section-title">Olá, Luis</h1>
-        <p class="section-sub">Segunda-feira, 20 de Abril de 2026</p>
+        <h1 class="section-title">Olá, <span th:text="${nome}">Nome</span></h1>
+        <p class="section-sub" th:text="${data}">Data</p>
       </div>
 
       <div class="kpi-grid">

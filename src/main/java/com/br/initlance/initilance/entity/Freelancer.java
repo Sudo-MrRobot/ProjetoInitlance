@@ -14,6 +14,6 @@ import jakarta.persistence.Column;
 @ToString(callSuper = true)
 public class Freelancer extends Usuario {
     
-    @Column(nullable = false, length = 11, unique = true)
+    @Column(length = 11, unique = true)
     private String cpf;
 }

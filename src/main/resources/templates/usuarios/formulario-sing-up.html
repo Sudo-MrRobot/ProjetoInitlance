@@ -122,27 +122,17 @@
                         </div>
 
                         <!-- Divisor social -->
-                        <div class="social-login" aria-label="Entrar com redes sociais">
-                            <button type="button" class="btn-social" aria-label="Continuar com Google">
-                                <i class="bi bi-google" aria-hidden="true"></i>
-                                Google
-                            </button>
-                            <a href="/oauth2/authorization/github" class="btn-social" aria-label="Continuar com GitHub" style="text-decoration: none;">
-                                <i class="bi bi-github" aria-hidden="true"></i>
-                                GitHub
-                            </a>
-
+                        <div class="divider-or" role="separator" aria-label="login local">
+                            <span>entre com e-mail e senha</span>
                         </div>
 
-                        <div class="divider-or" role="separator" aria-label="ou">
-                            <span>ou entre com e-mail</span>
-                        </div>
+                        <div th:if="${erro}" class="alert alert-danger" role="alert" th:text="${erro}"></div>
+                        <div th:if="${sucesso}" class="alert alert-success" role="alert" th:text="${sucesso}"></div>
 
                         <!-- Formulário -->
                         <form action="/login" method="post" novalidate aria-label="Formulário de login">
 
-                            <input type="hidden" name="tipo" value="freelancer" />
-
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
                             <!-- Campo E-mail -->
                             <div class="field-group">
                                 <label for="email" class="field-label">E-mail</label>

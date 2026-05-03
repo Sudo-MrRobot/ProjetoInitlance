@@ -12,4 +12,6 @@ public class InitlanceController {
     public String index(){
         return "index";
     }
+
+    
 }
